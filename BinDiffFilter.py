@@ -1,4 +1,4 @@
-from PySide import QtGui, QtCore
+﻿from PySide import QtGui, QtCore
 import idc  
 import pickle
 
@@ -235,8 +235,8 @@ class CBinDiffFilter(object):
         """
         Locate the IDA window we are looking for
         """
-        a = QtCore.QCoreApplication.instance()
-        widgets = a.allWidgets()
+        ins = QtCore.QCoreApplication.instance()
+        widgets = ins.allWidgets()
         for x in widgets:
             if x.objectName() == windowName:
                 return x
